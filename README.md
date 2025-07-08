@@ -86,7 +86,7 @@ Admins have their own dedicated UI to manage the system:
 
 Built by:
 - [Hind Sumary] – Front-end Development (Customer/Admin UI)
-- [Rama Shaheen] – [Back-end Development (Customer)]
+- @Rama-Shaheen – [Back-end Development (Customer)]
 - [Ayah Jumah] – [Back-end Development (Admin)]
 
 ---
