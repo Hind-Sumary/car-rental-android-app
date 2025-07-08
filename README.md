@@ -75,7 +75,7 @@ Admins have their own dedicated UI to manage the system:
 - **Manage Bookings**: View and update user bookings
 - **Reports**: Select a car brand and a date range to view **car revenues and usage stats**
 
-![Admin UI](photoss/mainadmin.png)
+![Admin UI](photos/mainadmin.png)
 
 ![Admin Reports](photos/reportadmin.png)
 
