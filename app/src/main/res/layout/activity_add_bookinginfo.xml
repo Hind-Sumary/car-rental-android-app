@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!-- Fixed header section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@color/black"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_headerLogo"
+            android:layout_width="128dp"
+            android:layout_height="62dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logoblack"
+            tools:ignore="ContentDescription" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Scrollable content section -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry"
+                android:text="@string/add_personal_info_string_addbinfo" />
+
+            <EditText
+                android:id="@+id/first_name"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:paddingStart="10dp"
+                tools:ignore="Autofill,RtlSymmetry,TextFields"
+                android:hint="@string/first_name_string_addbinfo" />
+
+            <EditText
+                android:id="@+id/last_name"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:paddingStart="10dp"
+                tools:ignore="Autofill,RtlSymmetry,TextFields"
+                android:hint="@string/last_name__string_addbinfo" />
+
+            <EditText
+                android:id="@+id/id_number"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="@string/id_number_string_addbinfo"
+                android:layout_marginTop="15dp"
+                android:paddingStart="10dp"
+                tools:ignore="Autofill,RtlSymmetry,TextFields"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/birthday"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:focusable="false"
+                android:hint="@string/birthday_string_addbinfo"
+                android:paddingStart="10dp"
+                tools:ignore="Autofill,RtlSymmetry,TextFields" />
+
+            <EditText
+                android:id="@+id/start_date"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:focusable="false"
+                android:hint="@string/start_date_string_addbinfo"
+                android:paddingStart="10dp"
+                tools:ignore="Autofill,RtlSymmetry,TextFields" />
+
+            <EditText
+                android:id="@+id/end_date"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="@string/end_date_string_addbinfo"
+                android:focusable="false"
+                android:layout_marginTop="15dp"
+                android:paddingStart="10dp"
+                tools:ignore="Autofill,RtlSymmetry,TextFields" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:text="@string/do_you_agree_to_our_terms_and_conditions_string_addbinfo"
+                    android:textSize="16sp"
+                    tools:ignore="RtlSymmetry" />
+
+                <Switch
+                    android:id="@+id/switch_terms"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_add_payment"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Add Payment Method"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/black"
+                android:layout_marginTop="15dp"/>
+
+            <ListView
+                android:id="@+id/card_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry"
+                android:layout_marginTop="15dp"/>
+
+            <LinearLayout
+                android:id="@+id/paymentInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:paddingStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/add_payment_info_string_addbinfo"
+                    tools:ignore="RtlSymmetry" />
+
+
+                <!-- Credit card input fields -->
+                <EditText
+                    android:id="@+id/card_number_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="@string/card_number_string_addbinfo"
+                    android:paddingStart="10dp"
+                    android:inputType="number"
+                    tools:ignore="Autofill,RtlSymmetry,TextFields"/>
+
+                <EditText
+                    android:id="@+id/card_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="@string/exp_date_string_addbinfo"
+                    android:paddingStart="10dp"
+                    tools:ignore="Autofill,RtlSymmetry,TextFields"/>
+
+                <EditText
+                    android:id="@+id/card_cvc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="@string/cvc_string_addbinfo"
+                    android:inputType="number"
+                    android:paddingStart="10dp"
+                    tools:ignore="Autofill,RtlSymmetry,TextFields"/>
+
+
+                <!-- Checkbox to save payment info -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical">
+
+                    <CheckBox
+                        android:id="@+id/save_payment_info_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        tools:ignore="RtlSymmetry"
+                        android:text="@string/save_this_payment_information_for_future_purchases_string_addbinfo" />
+
+                </LinearLayout>
+
+                <!-- Purchase button -->
+                <Button
+                    android:id="@+id/btn_purchase"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@color/black"
+                    android:text="@string/rent_string_addbinfo"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

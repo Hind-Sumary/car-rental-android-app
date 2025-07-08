@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/black"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_headerLogo"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logoblack"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/topList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/mercedesbtn"
+                android:layout_width="82dp"
+                android:layout_height="70dp"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/mercedes"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/bmwbtn"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:drawableTop="@drawable/bmw"
+                android:backgroundTint="@color/white"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/bentleybtn"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/bentley"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/porschebtn"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/porsche"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/ferraribtn"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:drawableTop="@drawable/ferrari"
+                android:backgroundTint="@color/white"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/astonMartinbtn"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:drawableTop="@drawable/aston_martin"
+                android:backgroundTint="@color/white"
+                tools:ignore="ButtonStyle" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+<!--            <EditText-->
+<!--                android:id="@+id/search_txt"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:hint="@string/search_main_page"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:background="@drawable/round_edit_txt"-->
+<!--                android:textStyle="bold"-->
+<!--                android:paddingStart="20dp"-->
+<!--                android:textSize="20sp"-->
+<!--                tools:ignore="Autofill,RtlSymmetry,TextFields" />-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_margin="10dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/trending_main_page"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="34sp" />
+
+            <include
+                android:id="@+id/card1"
+                layout="@layout/vehicle_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/card2"
+                layout="@layout/vehicle_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/card3"
+                layout="@layout/vehicle_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/box_buttons"
+            layout="@layout/buttons_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="620dp" />
+
+    </FrameLayout>
+
+</LinearLayout>
