@@ -91,7 +91,11 @@ Built by:
 
 ---
 
-## 🔚 Final Note
+## 📝 Note
+
+The full code is available at **master branch** previusly commited by my teammate Rama. 
+
+## 🔚 Final Thoughts
 
 This app was a stepping stone in my journey into Android development. I’m proud of what we achieved as a team, and I’m even more proud of the user interface I created from scratch under pressure and with passion. ❤️
 
